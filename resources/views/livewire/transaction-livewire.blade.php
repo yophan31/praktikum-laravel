@@ -6,6 +6,7 @@
                 <small class="text-muted">Halo, {{ $auth->name }}!</small>
             </div>
             <div>
+                
                 <a href="{{ route('app.statistics') }}" class="btn btn-info me-2">📊 Statistik</a>
                 <a href="{{ route('auth.logout') }}" class="btn btn-warning">Keluar</a>
             </div>
