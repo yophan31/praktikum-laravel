@@ -8,7 +8,7 @@
                 </div>
                 <hr>
                 {{-- Alamat Email --}}
-                <div class="form-group mb-3">
+                <div class="form-group mb-3 text-start">
                     <label>Email</label>
                     <input type="email" class="form-control" wire:model="email">
                     @error('email')
@@ -16,7 +16,7 @@
                     @enderror
                 </div>
                 {{-- Kata Sandi --}}
-                <div class="form-group mb-3">
+                <div class="form-group mb-3 text-start">
                     <label>Kata Sandi</label>
                     <input type="password" class="form-control" wire:model="password">
                     @error('password')
