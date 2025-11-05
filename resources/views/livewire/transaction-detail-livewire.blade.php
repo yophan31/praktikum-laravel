@@ -79,10 +79,7 @@
                             <td><strong>Dibuat pada</strong></td>
                             <td>: {{ $transaction->created_at->format('d F Y, H:i') }} WIB</td>
                         </tr>
-                        <tr>
-                            <td><strong>Diubah pada</strong></td>
-                            <td>: {{ $transaction->updated_at->format('d F Y, H:i') }} WIB</td>
-                        </tr>
+                        
                     </table>
                 </div>
             </div>
