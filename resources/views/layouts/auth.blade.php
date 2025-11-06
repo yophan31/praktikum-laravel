@@ -17,6 +17,8 @@
     {{-- Styles --}}
     @livewireStyles
     <link rel="stylesheet" href="/assets/vendor/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    @yield('others-css')
+</head>
 
     <style>
         body {
@@ -46,17 +48,16 @@
     </style>
 </head>
 
-<body>
-    <div class="auth-container">
-        {{-- Gambar di atas form --}}
-        <h3 class="app-title">Catatan Keuangan</h3>
-
-        {{-- Konten dari login/register --}}
+<body class="bg-light">
+    <div class="container-fluid mt-5">
         @yield('content')
     </div>
 
     {{-- Scripts --}}
     @livewireScripts
-    <script src="/assets/vendor/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/assets/vendor/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js">
+
+    @yield('others-js')
 </body>
+
 </html>

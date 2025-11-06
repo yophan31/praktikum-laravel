@@ -13,14 +13,15 @@ class AuthLoginLivewire extends Component
     public function login()
     {
         $this->validate([
-            'email' => 'required|string|email|max:255|exists:users,email',
+            'email' => 'required|string|email',
             'password' => 'required|string',
         ]);
 
         // Periksa apakah pengguna berhasil login
         if (!Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
             // Jika login gagal
-            $this->addError('email', 'Email atau kata sandi salah.');
+            $this->dispatch('showError', message: 'Email atau kata sandi salah.');
+            return;
         }
 
         // Reset data
